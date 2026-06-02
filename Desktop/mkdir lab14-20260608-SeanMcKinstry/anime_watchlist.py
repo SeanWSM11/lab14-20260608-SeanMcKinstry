@@ -12,6 +12,9 @@ class Anime:
     def update_status(self, new_status):
          self._status = new_status
 
+    def mark_completed(self, new_status):
+         self._status = new_status
+
 anime1 = Anime("Demon Slayer","Action","Watching")
 anime2 = Anime("Spy x Family","Comedy","Completed")
 anime3 = Anime("Jujutsu Kaisen","Action","Plan to Watch")
@@ -26,8 +29,19 @@ for anime in anime_list:
      print()
 
 
+""" Updated anime status """
+
 print ("Updating anime status...")
 anime3.update_status("Watching")
 
 print ("Updated Anime:")
 anime3.display_info()
+
+
+""" Improvment mark_completed """
+
+print ("\nCompleted Shows...")
+anime2.mark_completed("Completed")
+
+print("Completed Anime:")
+anime2.display_info()
